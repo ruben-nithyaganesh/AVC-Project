@@ -4,19 +4,19 @@ Team 9: Repository for ENGR101 Project 3
 Project 3 Plan 
 
 Members:-
-Natnael Gebremichael
-Corban Van Manen
-Ruben Nithyaganesh
-Alex Smith
+  Natnael Gebremichael
+  Corban Van Manen
+  Ruben Nithyaganesh
+  Alex Smith
 
 Communication tool:-
-Facebook messenger, Discord
+  Facebook messenger, Discord
 
 Roles:-
-Ruben Nithyaganesh - Project Manager
-Corban Van Manen - Software Architect
-Natnael Gebremichael - Testing and documentation
-Alex Smith - Testing and documentation
+- Ruben Nithyaganesh:   Project Manager
+- Corban Van Manen:     Software Architect
+- Natnael Gebremichael: Testing and documentation
+- Alex Smith:           Testing and documentation
 
 Objectives:- 
 
