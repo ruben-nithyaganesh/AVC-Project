@@ -1,0 +1,24 @@
+class imageProcessor{
+	
+	public:
+	int pixel(cameraView);	
+	
+};
+int imageProcessor::pixel(cameraView){
+    for(int i=0;i<150;i++){
+		int error=0;
+		int pix=get_pixel(cameraView,80,i,3);
+		int store=0;
+		while (store==0){
+			if(pix>250){
+			store=i;
+			cout<<"error"<<store;
+			}
+		}
+	}
+	
+	error=74-store;
+    cout<<"error"<<error;
+
+	return error;
+}
