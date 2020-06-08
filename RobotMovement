@@ -1,0 +1,40 @@
+class RobotMovement{
+	public:
+		void test();
+		void setTurn(double error, int turnDirection);
+		void robotStop();
+	private:
+		wheelSpeed calcTurnSpeed(double error, int turnDirection);
+};
+
+
+void RobotMovement::test(){
+				std::cout<<"Robot movement is here"<<std::endl;
+		}
+
+void RobotMovement::setTurn(double error, int turnDirection){
+				
+				wheelSpeed wheelTurn = calcTurnSpeed(error, turnDirection);
+				std::cout<<"vLeft = "<<wheelTurn.wheelLeft<<"vRight = "<<wheelTurn.wheelRight<<std::endl;
+				setMotors(wheelTurn.wheelLeft, wheelTurn.wheelRight);
+		}
+
+void RobotMovement::robotStop(){
+		setMotors(0, 0);
+}
+
+wheelSpeed RobotMovement::calcTurnSpeed(double error, int turnDirection){
+				wheelSpeed wheelTurn;
+				if(turnDirection == 0){ //0 means turning left{
+						wheelTurn.wheelLeft = 0;
+						wheelTurn.wheelRight = 1 * error;
+				} 
+				else if(turnDirection == 1){//1 means turning right{
+						wheelTurn.wheelLeft = 1 * error;
+						wheelTurn.wheelRight = 0;					
+				
+				
+			}
+			return wheelTurn;
+		}
+
