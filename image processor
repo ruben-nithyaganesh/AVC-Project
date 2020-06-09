@@ -6,19 +6,11 @@ class imageProcessor{
 	void prossessor(ImagePPM cameraview);
 	void printvalues();
 	imageProcessor();
-	int store1;
-	int store2;
-	int store3;
-	int store4;
-	int store5;	
+	int store1;	
 	int error;
 };
 imageProcessor::imageProcessor(){
-	store1=0;
-    store2=0;
-	store3=0;
-	store4=0;
-	store5=0;	
+	store1=0;	
 	error=0;
 		
 }
