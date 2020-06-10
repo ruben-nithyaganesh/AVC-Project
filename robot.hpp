@@ -6,10 +6,6 @@
 #include <sstream>
 #include <unistd.h>
 
-
-
-
-
 /**FUNCTIONS****/
 int connectNetwork();
 
@@ -31,9 +27,7 @@ std::vector<std::string> split (const std::string &s, char delim) {
     return result;
 }
 
-struct wheelSpeed{
-		double wheelLeft, wheelRight;
-};
+
 
 int initClientRobot(){
 	std::string fileName = "config.txt";
@@ -251,4 +245,5 @@ int setMotors(double vLeft, double vRight){
 
 	return 0;
 }
+
 
