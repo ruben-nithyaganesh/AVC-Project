@@ -1,30 +1,29 @@
-class ImageProcessor{	
+#include <iostream>
+
+class imageProcessor{
+	
 	public:
-	double processor(ImagePPM cameraview);
-	double getWhiteMidPoint(ImagePPM cameraview);	
+	void prossessor(ImagePPM cameraview);
+	void printvalues();
+	imageProcessor();
+	int store1;	
+	int error;
 };
-
-//Calculate and return error value (how far middle white pixel is from centre)
-double ImageProcessor::processor(ImagePPM cameraview){
-	double error = 75 - getWhiteMidPoint(cameraView);
-	std::cout<<"error: "<<error<<std::endl;
-	return error;
-}
-
-//Collects position of all white pixels in line, then finds the middle white pixel
-double ImageProcessor::getWhiteMidPoint(ImagePPM cameraview){ 
-		double totalWhite = 0;
-		double whiteCount = 0;
-		for(int i = 0; i < 150; i++){
-			if(get_pixel(cameraview, 99, i, 3) > 250){
-				totalWhite = totalWhite + i;
-				whiteCount += 1;
-
-		}
-								
-		}
+imageProcessor::imageProcessor(){
+	store1=0;	
+	error=0;
 		
-		return totalWhite / whiteCount;
-}	
-
-
+}
+void imageProcessor::prossessor(ImagePPM cameraview){
+	
+	for(int i=1;i<=150;i++){
+		int pix=get_pixel(cameraview,50,i,1);
+		if (store1==0){
+			if(pix>250){
+			store1=i;}		
+		}
+			
+	}
+	
+ error=75-store1;
+}

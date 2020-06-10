@@ -1,51 +1,46 @@
 class RobotMovement{
 	public:
 		void test();
-		void setTurn(double error);
+		double setTurnLeft(double error,double vright);
+		double setTurnRight(double error,double vleft);
 		void robotStop();
-		void robotForward(double speed);
 	private:
-		wheelSpeed calcTurnSpeed(double error);
-		
-		double speed = 20; //max speed of each wheel
+		void calcTurnSpeed(double error, int turnDirection);
 };
+//RobotMovement::RobotMovement(){
+//}
 
-//Sets wheel speed
-void RobotMovement::setTurn(double error){
+void RobotMovement::test(){
+				std::cout<<"Robot movement is here"<<std::endl;
+		}
+
+double RobotMovement::setTurnLeft(double error,double vright){
 				
-	wheelSpeed wheelTurn = calcTurnSpeed(error);				//Get speeds for each wheel, pass values into wheelTurn struct
-	std::cout<<"vLeft = "<<wheelTurn.wheelLeft<<" vRight = "<<wheelTurn.wheelRight<<std::endl;
-	setMotors(wheelTurn.wheelLeft, wheelTurn.wheelRight); 	//Set speed for each wheel
-}
-
-
-//Stops the robot
-void RobotMovement::robotStop(){ 
+				 return vright+error;
+				//std::cout<<"vLeft = "<<wheelTurn.wheelLeft<<"vRight = "<<wheelTurn.wheelRight<<std::endl;
+				//setMotors(wheelTurn.wheelLeft, wheelTurn.wheelRight);
+		}
+double RobotMovement::setTurnRight(double error,double vleft){
+				
+				  return vleft+error;
+				//std::cout<<"vLeft = "<<wheelTurn.wheelLeft<<"vRight = "<<wheelTurn.wheelRight<<std::endl;
+				//setMotors(wheelTurn.wheelLeft, wheelTurn.wheelRight);
+		}
+void RobotMovement::robotStop(){
 		setMotors(0, 0);
 }
-
-//Calculates speed of each wheel depending on error value
-wheelSpeed RobotMovement::calcTurnSpeed(double error){ 
+/*
+wheelSpeed RobotMovement::calcTurnSpeed(double error, int turnDirection){
 				wheelSpeed wheelTurn;
-				if(error > 0){          // >0 means needs to turn right
-						wheelTurn.wheelRight = speed  ;
-						wheelTurn.wheelLeft = speed - (error*(0.2*(0.1*speed)));
+				if(turnDirection == 0){ //0 means turning left{
+						wheelTurn.wheelLeft = 0;
+						wheelTurn.wheelRight = 1 * error;
 				} 
-			   else if(error < 0){  // <0 means needs to turn left
-						wheelTurn.wheelRight = speed + (error*(0.2*(0.1*speed)));
-						wheelTurn.wheelLeft= speed;					
-				}
+				else if(turnDirection == 1){//1 means turning right{
+						wheelTurn.wheelLeft = 1 * error;
+						wheelTurn.wheelRight = 0;					
 				
-			  else if(error != 0){ //If there are no white pixels, turn on the spot
-						wheelTurn.wheelRight = speed;
-						wheelTurn.wheelLeft= 0;						  
-			  }
 				
-			  else{
-						wheelTurn.wheelRight = speed;
-						wheelTurn.wheelLeft= speed;						   
-			   }
-
+			}
 			return wheelTurn;
-}
-
+		}*/
