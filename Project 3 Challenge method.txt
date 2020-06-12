@@ -1,0 +1,46 @@
+﻿First create a bounds detector class
+
+
+Three methods in the class, each return a boolean
+
+
+One scans for red pixels on the left, one scans for red pixels on the right, and one scans for red pixels right in front
+
+
+Call these returnLeft, returnRight, and returnFront
+
+
+If either returnLeft or returnRight return false at any time, then turn in that direction
+
+
+If both returnLeft AND returnRight return false, then either just turn in one hard coded direction, or choose a random left or right direction to go to
+
+
+If returnFront, returnLeft, and returnRight ALL return TRUE, simply make the robot turn 180 degrees
+
+
+This SHOULD work for every type of maze
+
+
+
+
+
+
+
+
+Improvements have to be made to image processing, perhaps make the scan box larger, so even at turning points the red walls will still be visible to the robot. For turning 180 degrees, make it turn in place for a certain amount of time for a full 180 degree turn.
+
+
+
+
+IF THIS METHOD DOES NOT WORK:
+If there are no white pixels, just keep going forwards until a wall is hit
+
+
+If a wall is hit, go backwards a small amount, then use the return functions, and see which area is open, turn on the spot 90 degrees and turn that way.
+
+
+If both areas are open (left and right), choose a random direction, or hard code turn one direction
+
+
+If both areas are closed, turn 180 degrees on the spot
