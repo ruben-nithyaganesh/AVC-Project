@@ -35,6 +35,15 @@ struct wheelSpeed{
 		double wheelLeft, wheelRight;
 };
 
+struct path{
+	bool left, right, forward;
+};
+
+struct pathInfo{
+	path posPaths;
+	double error;
+};
+
 int initClientRobot(){
 	std::string fileName = "config.txt";
 	std::ifstream inputFile;
