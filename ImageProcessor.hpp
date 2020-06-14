@@ -16,7 +16,7 @@ errors ImageProcessor::processor(ImagePPM cameraview){
 	pathInfo pathInfo1 = getPathInfo(cameraView);
 	
 	error1.error = 75 - pathInfo1.midpoint;
-	error1.redError = 20 - pathInfo1.redMidPoint;
+	error1.redError = 10 - pathInfo1.redMidPoint;
 	/*if(pathInfo1.posPaths.left){
 			error1.error = 74;
 	}
@@ -75,7 +75,7 @@ double ImageProcessor::returnRedMidPoint(ImagePPM cameraview){
 		double totalRed = 0;
 		double redCount = 0;
 		for(int i = 0; i < 75 ; i++){
-			if(get_pixel(cameraview, 99, i, 0) > 250){
+			if(get_pixel(cameraview, 50, i, 0) > 250){
 				totalRed = totalRed + i;
 				redCount += 1;							
 		}
