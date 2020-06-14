@@ -17,7 +17,10 @@ int main(){
   
     while(1){
 	  takePicture();
-	  robot.setTurn(image.processor(cameraView));     
+	  std::cout<<"Red on left is: "<<image.returnLeftRed(cameraView)<<std::endl;
+	  std::cout<<"Red on right is: "<<image.returnRightRed(cameraView)<<std::endl;
+	  std::cout<<"Red on front is: "<<image.returnFrontRed(cameraView)<<std::endl;
+	  robot.setTurn(image.processor(cameraView), image.returnLeftRed(cameraView), image.returnRightRed(cameraView), image.returnFrontRed(cameraView));     
       usleep(10000);
       
 	} //while
