@@ -36,12 +36,14 @@ double ImageProcessor::getWhiteMidPoint(ImagePPM cameraview){
 //Collects the red and green values for the 10th, to the 90th pixel on the left side of cameraView, and returns if a red pixel is present
 bool ImageProcessor::returnLeftRed(ImagePPM cameraView) {
 	float redVSGreen = 0.0f;
-	for (int i = 9; i < 89; i++) {
-		red = (float)get_pixel(cameraView, i, 1, 0);
-		green = (float)get_pixel(cameraView, i, 1, 1);
-		redGreenTest = red / green;
-		if (redGreenTest > redVSGreen) {
-			redVSGreen = redGreenTest;
+	for (int i = 0; i < 99; i++) {
+		for (int x = 0; x < 29; x++) {
+			red = (float)get_pixel(cameraView, i, x, 0);
+			green = (float)get_pixel(cameraView, i, x, 1);
+			redGreenTest = red / green;
+			if (redGreenTest > redVSGreen) {
+				redVSGreen = redGreenTest;
+			}
 		}
 	}
 
@@ -55,12 +57,14 @@ bool ImageProcessor::returnLeftRed(ImagePPM cameraView) {
 //Acts the same 
 bool ImageProcessor::returnRightRed(ImagePPM cameraView) {
 	float redVSGreen = 0.0f;
-	for (int i = 9; i < 89; i++) {
-		red = (float)get_pixel(cameraView, i, 149, 0);
-		green = (float)get_pixel(cameraView, i, 149, 1);
-		redGreenTest = red / green;
-		if (redGreenTest > redVSGreen) {
-			redVSGreen = redGreenTest;
+	for (int i = 0; i < 99; i++) {
+		for (int x = 129; x < 149; x++) {
+			red = (float)get_pixel(cameraView, i, x, 0);
+			green = (float)get_pixel(cameraView, i, x, 1);
+			redGreenTest = red / green;
+			if (redGreenTest > redVSGreen) {
+				redVSGreen = redGreenTest;
+			}
 		}
 	}
 
@@ -73,12 +77,14 @@ bool ImageProcessor::returnRightRed(ImagePPM cameraView) {
 
 bool ImageProcessor::returnFrontRed(ImagePPM cameraView) {
 	float redVSGreen = 0.0f;
-	for (int i = 49; i < 99; i++) {
-		red = (float)get_pixel(cameraView, 1, i, 0);
-		green = (float)get_pixel(cameraView, 99, i, 1);
-		redGreenTest = red / green;
-		if (redGreenTest > redVSGreen) {
-			redVSGreen = redGreenTest;
+	for (int i = 54; i < 55; i++) {
+		for (int x = 24; x < 124; x++) {
+			red = (float)get_pixel(cameraView, i, x, 0);
+			green = (float)get_pixel(cameraView, i, x, 1);
+			redGreenTest = red / green;
+			if (redGreenTest > redVSGreen) {
+				redVSGreen = redGreenTest;
+			}
 		}
 	}
 

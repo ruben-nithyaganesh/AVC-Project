@@ -4,9 +4,12 @@ class RobotMovement{
 		void setTurn(double error, bool isLeft, bool isRight, bool isFront);
 		void robotStop();
 		void robotForward(double speed);
+		void robot90Left();
+		void robot90Right();
 	private:
 		wheelSpeed calcTurnSpeed(double error);
 		wheelSpeed calcTurnSpeedWhiteless(bool isLeft, bool isRight, bool isFront);
+		bool isTurn;
 		
 		
 		double speed = 40; //max speed of each wheel
@@ -57,34 +60,28 @@ wheelSpeed RobotMovement::calcTurnSpeed(double error){
 
 wheelSpeed RobotMovement::calcTurnSpeedWhiteless(bool isLeft, bool isRight, bool isFront) {
 	wheelSpeed wheelTurn;
-	if (!isLeft && !isRight && !isFront) {
+	if (isFront) {
+		if (isLeft) {
+			wheelTurn.wheelRight = -6.0;
+			wheelTurn.wheelLeft = 6.0;
+		} else if (isRight) {
+			wheelTurn.wheelRight = 6.0;
+			wheelTurn.wheelLeft = -6.0;
+		} else if (isTurn){
+			wheelTurn.wheelRight = -6.0;
+			wheelTurn.wheelLeft = 6.0;
+		} else {
+			wheelTurn.wheelRight = 6.0;
+			wheelTurn.wheelLeft = -6.0;
+		}
+	} else {
 		wheelTurn.wheelRight = speed;
-		wheelTurn.wheelRight = speed;
-	} else if (isRight && isLeft) {
-		if (!isFront) {
-			wheelTurn.wheelRight = speed;
-			wheelTurn.wheelLeft = speed;
-		} else {
-			wheelTurn.wheelRight = speed;
-			wheelTurn.wheelRight = 0;
-		}
-	} else if (isLeft) {
-		if (!isRight) {
-			wheelTurn.wheelRight = speed / 2.0;
-			wheelTurn.wheelLeft = speed;
-		} else {
-			wheelTurn.wheelRight = speed;
-			wheelTurn.wheelRight = speed;
-		}
-	} else if (isRight) {
-		if (!isLeft) {
-			wheelTurn.wheelRight = speed;
-			wheelTurn.wheelLeft = speed / 2.0;
-		} else {
-			wheelTurn.wheelRight = speed;
-			wheelTurn.wheelRight = speed;
-		}
+		wheelTurn.wheelLeft = speed;
 	}
 	
 	return wheelTurn;
+}
+
+void RobotMovement::robot90Left() {
+	setMotors(90, -90);
 }
