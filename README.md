@@ -167,7 +167,7 @@ Setup Instructions:
 
 63. In the “Project” folder, double click on “AVC_robot”
 
-64. Go back into the “Files” window, an press the keys “Control” and “A” at the same time to select all the files
+64. Go back into the “Files” window, and highlight all the files (excluding the "Server makefile" folder) By clicking and holding in whitespace, and dragging until a rectangle forms around all the files (robot.cpp, robot.hpp, ImageProcessor.hpp, RobotMovement.hpp, makefile)
 
 65. Click and hold, and drag and drop the files inside the “AVC_robot” folder currently open in the separate window (make sure you drop the files into white space), this will move all the files to the “AVC_robot” folder. When a window pops up asking if you want to replace files, click on “Replace the files in the destination”
 
