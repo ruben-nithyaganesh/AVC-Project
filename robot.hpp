@@ -35,6 +35,19 @@ struct wheelSpeed{
 		double wheelLeft, wheelRight;
 };
 
+
+struct Paths{
+		bool front, left, right;
+};
+
+std::string returnMazeType(){
+	std::ifstream configFile;
+	configFile.open("../AVC_server/config.txt");
+	std::string line;
+	getline(configFile, line);
+	return line;	
+}
+
 int initClientRobot(){
 	std::string fileName = "config.txt";
 	std::ifstream inputFile;
