@@ -219,57 +219,100 @@ Setup Instructions:
 
 89. In the bottom right hand corner of the window, click ok
 
-90. Find the “Build” button again and click the arrow next to it
+90. Close Geany
 
-91. In the drop down menu click “Make All”
+91. Press the windows key, and type in "control panel", open the control panel application
 
-92. Wait for the console on the bottom to state "compilation finisheed"
+92. In the search bar in the top right hand corner, click on it, and type "uninstall"
 
-93. Towards the top left, there should be a “Open” button with a picture of a folder, click on it
+93. Click on the blue text saying "uninstall a program"
 
-94. In the window that appears, on the left hand side, yet again find your (C:) drive and click on it
+94. Yet again in the search bar, type "tdm"
 
-95. Find the “Project” folder and double click on it
+95. Right click on the "TDM-GCC" item that will appear and click uninstall
 
-96. Find the “AVC_robot” folder and double click on it
+96. In the pop up that appears click "yes"
 
-97. Find the “robot.cpp” file and click on it once
+97. Double click on the text that says "C:\TDM-GCC-32", and wait for it to uninstall
 
-98. In the bottom right corner of the window, click open
+98. Click next
 
-99. In the same top bar that the “Open” button was located, find the “Build” button with a picture of a brick
+99. Click finish
 
-100. Click on the arrow next to it
+100. Go back into the "All Downloads Needed folder" and double click "tdm-gcc-5.1.0-3.exe"
 
-101. In the drop down menu click “Make All”
+101. In the pop up that appears click yes
 
-102. When the console log on the bottom says “Compilation Completed”, minimise Geany
+102. Uncheck the "Check for updated files on the TDM-GCC server"
 
-103. Go back into the “Project” folder
+103. Click create
 
-104. Double click on “AVC_server”
+104. Click next
 
-105. Scroll down until you find “server3” application
+105. Click next
 
-106. Double click on it to open the maze window
+106. In the pop up window that appears, click yes when prompted that the folder is not empty
 
-107. Go back into the “AVC_server” window
+107. Click install
 
-108. Go back into the “Project” folder
+108. Once finished installing, click next
 
-109. Double click on “AVC_robot”
+109. Uncheck "Read the TDM-GCC README file (recommended)
 
-110. Double click on “robot” application
+110. Click finish
 
-111. Find the server maze window that opened when you double clicked “server3” application, the robot should be traversing the maze
+111. Go back to your desktop and double click on "Geany" to open geany
 
-112. If you want to open a different maze, got back into the “Project” folder, and then double click on “AVC_server”
+112. Find the “Build” button again (in the same top menu the open button was) and click the arrow next to it
 
-113. Find “config.txt” and double click it to open it in notepad
+113. In the drop down menu click “Make All”
 
-114. When notepad opens, the first line should say “mazeFile,core.txt”
+114. Wait for the console on the bottom to state "compilation finisheed"
 
-115. To change to a completion, and then a challenge map, simply replace “core.txt” with “completion.txt”, or “challenge.txt”
-Repeat steps 93 - 111
+115. Towards the top left, there should be a “Open” button with a picture of a folder, click on it
 
-116. In "All Downloads Needed folder", there is a project test case document containing test cases we worked on, please check it out
+116. In the window that appears, on the left hand side, yet again find your (C:) drive and click on it
+
+117. Find the “Project” folder and double click on it
+
+118. Find the “AVC_robot” folder and double click on it
+
+119. Find the “robot.cpp” file and click on it once
+
+120. In the bottom right corner of the window, click open
+
+121. In the same top bar that the “Open” button was located, find the “Build” button with a picture of a brick
+
+122. Click on the arrow next to it
+
+123. In the drop down menu click “Make All”
+
+124. When the console log on the bottom says “Compilation Completed”, minimise Geany
+
+125. Go back into the “Project” folder
+
+126. Double click on “AVC_server”
+
+127. Scroll down until you find “server3” application
+
+128. Double click on it to open the maze window
+
+129. Go back into the “AVC_server” window
+
+130. Go back into the “Project” folder
+
+131. Double click on “AVC_robot”
+
+132. Double click on “robot” application
+
+133. Find the server maze window that opened when you double clicked “server3” application, the robot should be traversing the maze
+
+134. If you want to open a different maze, got back into the “Project” folder, and then double click on “AVC_server”
+
+135. Find “config.txt” and double click it to open it in notepad
+
+136. When notepad opens, the first line should say “mazeFile,core.txt”
+
+137. To change to a completion, and then a challenge map, simply replace “core.txt” with “completion.txt”, or “challenge.txt” and repeat steps 125 - 133
+
+138. In "All Downloads Needed folder", there is a project test case document containing test cases we worked on, please check it out
