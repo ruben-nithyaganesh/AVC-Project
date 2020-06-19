@@ -271,3 +271,5 @@ Setup Instructions:
 
 115. To change to a completion, and then a challenge map, simply replace “core.txt” with “completion.txt”, or “challenge.txt”
 Repeat steps 93 - 111
+
+116. In "All Downloads Needed folder", there is a project test case document containing test cases we worked on, please check it out
