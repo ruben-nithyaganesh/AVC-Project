@@ -79,7 +79,7 @@ Setup Instructions:
 
 19. Click install
 
-20. Once finished installing click finish
+20. Once finished installing click finish, and restart your computer. After restarting and logging back in, open the "All Downloads Needed folder" again
 
 21. Go back into the “All Downloads Needed folder”
 
@@ -99,7 +99,7 @@ Setup Instructions:
 
 29. Uncheck “Read the TDM-GCC README file (recommended)”
 
-30. Click finish
+30. Click finish, and restart your computer. After logging back in, open the "All Download Needed folder"
 
 31. Go back into the “All Downloads Needed folder”
 
@@ -177,63 +177,97 @@ Setup Instructions:
 
 68. Do the exact same as you did for the “robot” application, with the “robot.o” file
 
-69. Go to your desktop, and double click “Geany” to start geany
+69. Go back into the "Project" folder
 
-70. Towards the top left, there should be a “Open” button with a picture of a folder, click on it
+70. Double click on the "AVC_server" folder
 
-71. In the window that appears, on the left hand side, yet again find your (C:) drive and click on it
+71. scroll down until you find the "server3" application, and the "server3.o" file
 
-72. Find the “Project” folder and double click on it
+72. Right click on each of them, and in the drop down menu select delete
 
-73. Find the “AVC_robot” folder and double click on it
+73. Go back to the "All Downloads Needed folder" and double click on files
 
-74. Find the “robot.cpp” file and click on it once
+74. double click on "Server makefile"
 
-75. In the bottom right corner of the window, click open
+75. Click and hold on "makefile" and drag and drop it into the "AVC_sever" folder you should currently be in. When prompted by a pop up window if you want to replace the file, click "yes"
 
-76. In the same top bar that the “Open” button was located, find the “Build” button with a picture of a brick
+76. Go to your desktop, and double click “Geany” to start geany
 
-77. Click on the arrow next to it
+77. Towards the top left, there should be a “Open” button with a picture of a folder, click on it
 
-78. In the drop down menu, click on “Set Build Commands”, this should open a new window
+78. In the window that appears, on the left hand side, yet again find your (C:) drive and click on it
 
-79. There will be a number of boxes, under the “Independent commands” subtitle, find the first box named “Make”
+79. Find the “Project” folder and double click on it
 
-80. To the right of that box, there should be a textbox that says “make”
+80. Find the "AVC_server" folder and double click on it
 
-81. Delete the contents of this text box, and instead type “mingw32-make” (Do not include the quotation marks)
+81. Find the "server3.cpp" file and click on it once
 
-82. In the bottom right hand corner of the window, click ok
+82. In the bottom right hand corner of the window click open
 
-83. Find the “Build” button again and click the arrow next to it
+83. In the same top bar that the "Open" button was located, find the "Build" button with a picture of a brick
 
-84. In the drop down menu click “Make All”
+84. Click on the arrow next to it
 
-85. When the console log on the bottom says “Compilation Completed”, minimise Geany
+85. In the drop down menu, click on “Set Build Commands”, this should open a new window
 
-86. Go back into the “Project” folder
+86. There will be a number of boxes, under the “Independent commands” subtitle, find the first box named “Make”
 
-87. Double click on “AVC_server”
+87. To the right of that box, there should be a textbox that says “make”
 
-88. Scroll down until you find “server3” application
+88. Delete the contents of this text box, and instead type “mingw32-make” (Do not include the quotation marks)
 
-89. Double click on it to open the maze window
+89. In the bottom right hand corner of the window, click ok
 
-90. Go back into the “AVC_server” window
+90. Find the “Build” button again and click the arrow next to it
 
-91. Go back into the “Project” folder
+91. In the drop down menu click “Make All”
 
-92. Double click on “AVC_robot”
+92. Wait for the console on the bottom to state "compilation finisheed"
 
-93. Double click on “robot” application
+93. Towards the top left, there should be a “Open” button with a picture of a folder, click on it
 
-94. Find the server maze window that opened when you double clicked “server3” application, the robot should be traversing the maze
+94. In the window that appears, on the left hand side, yet again find your (C:) drive and click on it
 
-95. If you want to open a different maze, got back into the “Project” folder, and then double click on “AVC_server”
+95. Find the “Project” folder and double click on it
 
-96. Find “config.txt” and double click it to open it in notepad
+96. Find the “AVC_robot” folder and double click on it
 
-97. When notepad opens, the first line should say “mazeFile,core.txt”
+97. Find the “robot.cpp” file and click on it once
 
-98. To change to a completion, and then a challenge map, simply replace “core.txt” with “completion.txt”, or “challenge.txt”
-Repeat steps 86 - 94
+98. In the bottom right corner of the window, click open
+
+99. In the same top bar that the “Open” button was located, find the “Build” button with a picture of a brick
+
+100. Click on the arrow next to it
+
+101. In the drop down menu click “Make All”
+
+102. When the console log on the bottom says “Compilation Completed”, minimise Geany
+
+103. Go back into the “Project” folder
+
+104. Double click on “AVC_server”
+
+105. Scroll down until you find “server3” application
+
+106. Double click on it to open the maze window
+
+107. Go back into the “AVC_server” window
+
+108. Go back into the “Project” folder
+
+109. Double click on “AVC_robot”
+
+110. Double click on “robot” application
+
+111. Find the server maze window that opened when you double clicked “server3” application, the robot should be traversing the maze
+
+112. If you want to open a different maze, got back into the “Project” folder, and then double click on “AVC_server”
+
+113. Find “config.txt” and double click it to open it in notepad
+
+114. When notepad opens, the first line should say “mazeFile,core.txt”
+
+115. To change to a completion, and then a challenge map, simply replace “core.txt” with “completion.txt”, or “challenge.txt”
+Repeat steps 93 - 111
